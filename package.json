@@ -1,0 +1,11 @@
+{
+  "name": "darlo-scraper",
+  "version": "1.0.0",
+  "description": "Notify me when coffee is available",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rory Dungan <rorydungan@gmail.com>",
+  "license": "ISC"
+}
