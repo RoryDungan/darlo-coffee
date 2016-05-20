@@ -5,7 +5,6 @@ var yaml = require('js-yaml');
 var fs = require('fs');
 
 var url = 'https://www.darlocoffee.com/store/p8/Cold_Brew_in_a_Box_%282_Pack%29.html';
-var recipients = ['rorydungan@gmail.com'];
 
 var sendEmail = function(config) {
     var transport = nodemailer.createTransport({
@@ -21,7 +20,7 @@ var sendEmail = function(config) {
         return;
     }
     
-    recipients.forEach(function (recipient) {
+    config.recipients.forEach(function (recipient) {
         
         transport.sendMail(
             {
