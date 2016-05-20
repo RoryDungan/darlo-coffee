@@ -8,12 +8,12 @@ var url = 'https://www.darlocoffee.com/store/p8/Cold_Brew_in_a_Box_%282_Pack%29.
 
 var sendEmail = function(config) {
     var transport = nodemailer.createTransport({
-		service: "Gmail",
-		auth: {
-			user: config.user,
-			pass: config.pass,
-		},
-	});
+        service: "Gmail",
+        auth: {
+            user: config.user,
+            pass: config.pass,
+        },
+    });
     
     if (!config.recipients || !(config.recipients instanceof Array)) {
         console.error("No email recipients set up in config");
@@ -49,8 +49,6 @@ var sendEmail = function(config) {
 //
 try {
     var config = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf-8'));
-    
-    console.log(config);
     
     //
     // Execute request
